@@ -7,26 +7,26 @@ on:
 jobs:
   ai-attribution-check:
     name: Check AI Attribution
-    uses: maxrantil/.github/.github/workflows/issue-ai-attribution-check-reusable.yml@main
+    uses: maxrantil/.github/workflows/issue-ai-attribution-check-reusable.yml@main
     with:
       fail_on_attribution: true
 
   format-check:
     name: Check Format
-    uses: maxrantil/.github/.github/workflows/issue-format-check-reusable.yml@main
+    uses: maxrantil/.github/workflows/issue-format-check-reusable.yml@main
     with:
       min_body_length: 20
       fail_on_problems: true
 
   prd-reminder:
     name: PRD/PDR Reminder
-    uses: maxrantil/.github/.github/workflows/issue-prd-reminder-reusable.yml@main
+    uses: maxrantil/.github/workflows/issue-prd-reminder-reusable.yml@main
     with:
       prd_location_path: 'docs/implementation/'
       required_for_labels: 'enhancement,feature'
 
   auto-label:
     name: Auto-Label
-    uses: maxrantil/.github/.github/workflows/issue-auto-label-reusable.yml@main
+    uses: maxrantil/.github/workflows/issue-auto-label-reusable.yml@main
     with:
       enable_comment: true
