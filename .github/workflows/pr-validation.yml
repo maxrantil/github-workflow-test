@@ -10,6 +10,9 @@ on:
 jobs:
   commit-quality:
     name: Commit Quality Check
+    permissions:
+      pull-requests: write
+      contents: read
     uses: maxrantil/.github/.github/workflows/commit-quality-check-reusable.yml@master
     with:
       base-branch: 'master'
