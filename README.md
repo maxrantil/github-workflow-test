@@ -49,3 +49,4 @@ Testing commit quality workflow with fixup commits.
 # trigger
 # trigger2
 # trigger3
+# trigger4
