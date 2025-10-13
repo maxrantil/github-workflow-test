@@ -36,6 +36,10 @@ Testing 4 issue validation workflows:
    - Title: "Security vulnerability in authentication"
    - Body: "Found XSS vulnerability in login form. Need to fix urgently."
 
+## Phase 3: Commit Quality Check
+
+Testing commit quality workflow with fixup commits.
+
 ## Expected Results:
 
 - Tests 1 & 2: Workflow FAILS, comment posted, label added
