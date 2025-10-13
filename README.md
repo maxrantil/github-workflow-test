@@ -48,3 +48,4 @@ Testing commit quality workflow with fixup commits.
 - Test 5: Auto-labeled as 'security', 'bug', 'priority: high'
 # trigger
 # trigger2
+# trigger3
