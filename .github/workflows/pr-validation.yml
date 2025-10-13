@@ -1,0 +1,18 @@
+# ABOUTME: PR validation workflow to test commit quality check
+
+name: PR Validation
+
+on:
+  pull_request:
+    branches: [master]
+    types: [opened, edited, synchronize]
+
+jobs:
+  commit-quality:
+    name: Commit Quality Check
+    uses: maxrantil/.github/.github/workflows/commit-quality-check-reusable.yml@main
+    with:
+      base-branch: 'master'
+      fail-on-fixups: false
+      suggest-cleanup: true
+      cleanup-score-threshold: 'MEDIUM'
