@@ -36,9 +36,17 @@ Testing 4 issue validation workflows:
    - Title: "Security vulnerability in authentication"
    - Body: "Found XSS vulnerability in login form. Need to fix urgently."
 
+## Phase 3: Commit Quality Check
+
+Testing commit quality workflow with fixup commits.
+
 ## Expected Results:
 
 - Tests 1 & 2: Workflow FAILS, comment posted, label added
 - Test 3: Workflow PASSES, PRD reminder posted, auto-labeled
 - Test 4: Workflow PASSES, auto-labeled as 'bug'
 - Test 5: Auto-labeled as 'security', 'bug', 'priority: high'
+# trigger
+# trigger2
+# trigger3
+# trigger4
