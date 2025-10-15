@@ -9,3 +9,4 @@ Clean commit 7
 Fixup 1
 Fixup 2
 Fixup 3
+Fixup 4
