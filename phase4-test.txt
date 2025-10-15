@@ -5,3 +5,4 @@ Clean commit 3
 Clean commit 4
 Clean commit 5
 Clean commit 6
+Clean commit 7
