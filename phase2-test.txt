@@ -1,0 +1,21 @@
+Test file for Phase 2
+fixup test
+wip test
+tmp test
+oops test
+typo test
+clean test
+wip test
+tmp test
+oops test
+typo test
+clean commit
+fixup test 2
+wip test 2
+tmp test 2
+oops test 2
+typo test 2
+wip test 3
+tmp test 3
+oops test 3
+typo test 3
