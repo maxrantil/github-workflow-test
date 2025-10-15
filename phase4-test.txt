@@ -7,3 +7,4 @@ Clean commit 5
 Clean commit 6
 Clean commit 7
 Fixup 1
+Fixup 2
