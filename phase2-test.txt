@@ -10,3 +10,8 @@ tmp test
 oops test
 typo test
 clean commit
+fixup test 2
+wip test 2
+tmp test 2
+oops test 2
+typo test 2
