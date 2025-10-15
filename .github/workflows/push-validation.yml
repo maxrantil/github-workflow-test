@@ -1,0 +1,12 @@
+name: Push Validation
+
+on:
+  push:
+    branches:
+      - '**'
+
+jobs:
+  conventional-commits:
+    uses: maxrantil/.github/.github/workflows/conventional-commit-check-reusable.yml@master
+    with:
+      base-branch: master
