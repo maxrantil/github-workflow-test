@@ -3,3 +3,4 @@ ci test 1
 lint test 1
 pre-commit test 1
 clean ci commit
+mixed test
