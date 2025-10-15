@@ -2,3 +2,4 @@ Phase 4: HIGH score test
 Clean commit 1
 Clean commit 2
 Clean commit 3
+Clean commit 4
