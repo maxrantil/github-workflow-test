@@ -8,3 +8,4 @@ Clean commit 6
 Clean commit 7
 Fixup 1
 Fixup 2
+Fixup 3
