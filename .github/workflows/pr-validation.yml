@@ -1,0 +1,18 @@
+name: PR Validation
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+permissions:
+  pull-requests: write
+  contents: read
+
+jobs:
+  commit-quality:
+    uses: maxrantil/.github/.github/workflows/commit-quality-check-reusable.yml@master
+    with:
+      base-branch: master
+      fail-on-fixups: true
+      suggest-cleanup: true
+      cleanup-score-threshold: LOW
