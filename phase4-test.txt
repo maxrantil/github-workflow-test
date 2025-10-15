@@ -1,0 +1,12 @@
+Phase 4: HIGH score test
+Clean commit 1
+Clean commit 2
+Clean commit 3
+Clean commit 4
+Clean commit 5
+Clean commit 6
+Clean commit 7
+Fixup 1
+Fixup 2
+Fixup 3
+Fixup 4
