@@ -1,3 +1,4 @@
 Test file for Phase 3
 ci test 1
 lint test 1
+pre-commit test 1
