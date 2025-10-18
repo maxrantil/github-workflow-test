@@ -1,0 +1,18 @@
+# Test workflow for python-test-reusable validation
+name: Python Tests
+
+on:
+  pull_request:
+  push:
+    branches:
+      - master
+      - 'test/**'
+
+jobs:
+  test:
+    name: Run Python Tests
+    uses: maxrantil/.github/.github/workflows/python-test-reusable.yml@feat/issue-13-python-test-validation
+    with:
+      python-version: '3.11'
+      install-command: 'uv sync --dev'
+      test-command: 'uv run pytest --cov --cov-report=term-missing'
