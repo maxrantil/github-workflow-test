@@ -1,0 +1,14 @@
+# Test workflow for session-handoff-check-reusable.yml
+name: PR Validation
+
+on:
+  pull_request:
+    types: [opened, synchronize, ready_for_review]
+
+jobs:
+  session-handoff:
+    uses: maxrantil/.github/.github/workflows/session-handoff-check-reusable.yml@master
+    with:
+      base-branch: master
+      handoff-file: SESSION_HANDOVER.md
+      min-lines: 10
