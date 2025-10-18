@@ -1,7 +1,7 @@
 """Tests for calculator module - 100% coverage."""
 
 import pytest
-from src.calculator import add, subtract, multiply, divide
+from calculator import add, subtract, multiply, divide
 
 
 class TestAdd:
