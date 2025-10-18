@@ -1,0 +1,14 @@
+# ABOUTME: Push validation workflows (protect master branch)
+
+name: Push Validation
+
+on:
+  push:
+    branches: ['**']  # Run on all branches for testing
+
+jobs:
+  protect-master:
+    name: Protect Master Branch
+    uses: maxrantil/.github/.github/workflows/protect-master-reusable.yml@master
+    with:
+      protected-branch: 'master'
