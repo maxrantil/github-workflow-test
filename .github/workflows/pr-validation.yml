@@ -1,4 +1,4 @@
-# Test workflow for session-handoff-check-reusable.yml
+# Test workflow for reusable workflows
 name: PR Validation
 
 on:
@@ -12,3 +12,6 @@ jobs:
       base-branch: master
       handoff-file: SESSION_HANDOVER.md
       min-lines: 10
+
+  shell-quality:
+    uses: maxrantil/.github/.github/workflows/shell-quality-reusable.yml@master
