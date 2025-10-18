@@ -14,5 +14,5 @@ jobs:
     uses: maxrantil/.github/.github/workflows/python-test-reusable.yml@feat/issue-13-python-test-validation
     with:
       python-version: '3.11'
-      install-command: 'uv sync --dev'
+      install-command: 'uv sync'
       test-command: 'uv run pytest --cov --cov-report=term-missing'
