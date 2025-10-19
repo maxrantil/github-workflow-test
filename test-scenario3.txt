@@ -1,0 +1,2 @@
+# Scenario 3 Test: Push to non-master branch
+This should pass because we're not pushing to master
