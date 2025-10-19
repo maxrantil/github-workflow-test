@@ -1,0 +1,2 @@
+# Scenario 1 Test: Direct push to master
+This should be BLOCKED by protect-master workflow
