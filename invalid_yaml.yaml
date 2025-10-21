@@ -1,0 +1,6 @@
+# Invalid YAML - should FAIL pre-commit
+name: test
+bad syntax here:
+  - missing colon
+  invalid indentation
+    wrong: structure
