@@ -1,101 +1,75 @@
-"""Tests for calculator module - 100% coverage."""
+"""Tests for calculator module - Phase 2: FAILING TESTS."""
 
 import pytest
 from calculator import add, subtract, multiply, divide
 
 
 class TestAdd:
-    """Test addition function."""
+    """Test addition function - with assertion failures."""
 
-    def test_add_positive_numbers(self):
-        """Test adding positive numbers."""
-        assert add(2, 3) == 5
+    def test_add_positive_numbers_FAIL(self):
+        """Test adding positive numbers - WRONG expected value."""
+        assert add(2, 3) == 6  # FAIL: Should be 5
 
-    def test_add_negative_numbers(self):
-        """Test adding negative numbers."""
-        assert add(-2, -3) == -5
-
-    def test_add_mixed_numbers(self):
-        """Test adding positive and negative numbers."""
-        assert add(5, -3) == 2
-
-    def test_add_zero(self):
-        """Test adding zero."""
-        assert add(5, 0) == 5
-
-    def test_add_floats(self):
-        """Test adding floats."""
-        assert add(2.5, 3.5) == 6.0
+    def test_add_negative_numbers_FAIL(self):
+        """Test adding negative numbers - WRONG expected value."""
+        assert add(-2, -3) == -4  # FAIL: Should be -5
 
 
 class TestSubtract:
-    """Test subtraction function."""
+    """Test subtraction function - with assertion failures."""
 
-    def test_subtract_positive_numbers(self):
-        """Test subtracting positive numbers."""
-        assert subtract(5, 3) == 2
+    def test_subtract_positive_numbers_FAIL(self):
+        """Test subtracting positive numbers - WRONG expected value."""
+        assert subtract(5, 3) == 3  # FAIL: Should be 2
 
-    def test_subtract_negative_numbers(self):
-        """Test subtracting negative numbers."""
-        assert subtract(-5, -3) == -2
-
-    def test_subtract_mixed_numbers(self):
-        """Test subtracting mixed numbers."""
-        assert subtract(5, -3) == 8
-
-    def test_subtract_zero(self):
-        """Test subtracting zero."""
-        assert subtract(5, 0) == 5
-
-    def test_subtract_floats(self):
-        """Test subtracting floats."""
-        assert subtract(5.5, 2.5) == 3.0
+    def test_subtract_logic_error_FAIL(self):
+        """Test subtraction - backwards logic."""
+        assert subtract(10, 3) == 3  # FAIL: Should be 7
 
 
 class TestMultiply:
-    """Test multiplication function."""
+    """Test multiplication function - with exceptions."""
 
-    def test_multiply_positive_numbers(self):
-        """Test multiplying positive numbers."""
-        assert multiply(3, 4) == 12
+    def test_multiply_raises_unexpected_exception_FAIL(self):
+        """Test that should raise ValueError but doesn't."""
+        with pytest.raises(ValueError):  # FAIL: multiply doesn't raise
+            multiply(3, 4)
 
-    def test_multiply_negative_numbers(self):
-        """Test multiplying negative numbers."""
-        assert multiply(-3, -4) == 12
-
-    def test_multiply_mixed_numbers(self):
-        """Test multiplying mixed numbers."""
-        assert multiply(3, -4) == -12
-
-    def test_multiply_zero(self):
-        """Test multiplying by zero."""
-        assert multiply(5, 0) == 0
-
-    def test_multiply_floats(self):
-        """Test multiplying floats."""
-        assert multiply(2.5, 4.0) == 10.0
+    def test_multiply_wrong_exception_type_FAIL(self):
+        """Test expecting wrong exception type."""
+        with pytest.raises(TypeError):  # FAIL: divide raises ValueError
+            divide(10, 0)
 
 
 class TestDivide:
-    """Test division function."""
+    """Test division function - with assertion failures."""
 
-    def test_divide_positive_numbers(self):
-        """Test dividing positive numbers."""
-        assert divide(10, 2) == 5.0
+    def test_divide_positive_numbers_FAIL(self):
+        """Test dividing positive numbers - WRONG expected value."""
+        assert divide(10, 2) == 4.0  # FAIL: Should be 5.0
 
-    def test_divide_negative_numbers(self):
-        """Test dividing negative numbers."""
-        assert divide(-10, -2) == 5.0
+    def test_divide_missing_exception_check_FAIL(self):
+        """Test divide by zero without catching exception."""
+        # FAIL: This will raise ValueError but we don't catch it
+        result = divide(10, 0)
+        assert result == 0
 
-    def test_divide_mixed_numbers(self):
-        """Test dividing mixed numbers."""
-        assert divide(10, -2) == -5.0
 
-    def test_divide_floats(self):
-        """Test dividing floats."""
-        assert divide(7.5, 2.5) == 3.0
+class TestSyntaxErrors:
+    """Tests with syntax errors - should fail during collection."""
 
-    def test_divide_by_zero(self):
-        """Test division by zero raises ValueError."""
-        with pytest.raises(ValueError, match="Cannot divide by zero"):
-            divide(10, 0)
+    def test_syntax_error_FAIL(self):
+        """Test with intentional syntax error."""
+        # FAIL: Syntax error - missing closing parenthesis
+        assert add(2, 3 == 5
+
+
+class TestImportErrors:
+    """Tests with import errors."""
+
+    def test_import_nonexistent_module_FAIL(self):
+        """Test importing non-existent module."""
+        # FAIL: Module doesn't exist
+        from nonexistent_module import fake_function
+        assert fake_function() == True
