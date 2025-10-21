@@ -10,7 +10,7 @@ permissions:
 jobs:
   ai-attribution-check:
     name: Check AI Attribution
-    uses: maxrantil/.github/.github/workflows/issue-ai-attribution-check-reusable.yml@master
+    uses: maxrantil/.github/.github/workflows/issue-ai-attribution-check-reusable.yml@feat/issue-13-python-test-validation
     with:
       fail_on_attribution: true
 
