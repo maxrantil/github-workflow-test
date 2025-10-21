@@ -1,4 +1,4 @@
-# Test workflow for session-handoff-check-reusable.yml
+# Test workflow for session-handoff-check-reusable.yml and pr-body-ai-attribution-check-reusable.yml
 name: PR Validation
 
 on:
@@ -12,3 +12,9 @@ jobs:
       base-branch: master
       handoff-file: SESSION_HANDOVER.md
       min-lines: 10
+
+  pr-body-ai-attribution:
+    uses: maxrantil/.github/.github/workflows/pr-body-ai-attribution-check-reusable.yml@master
+    with:
+      block-ai-tools: true
+      block-agent-mentions: true
