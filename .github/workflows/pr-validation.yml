@@ -1,4 +1,4 @@
-# Test workflow for session-handoff-check-reusable.yml
+# Test workflow for session-handoff-check-reusable.yml and pre-commit-check-reusable.yml
 name: PR Validation
 
 on:
@@ -12,3 +12,10 @@ jobs:
       base-branch: master
       handoff-file: SESSION_HANDOVER.md
       min-lines: 10
+
+  pre-commit:
+    uses: maxrantil/.github/.github/workflows/pre-commit-check-reusable.yml@master
+    with:
+      python-version: '3.x'
+      base-branch: master
+      run-on-all-files: false
