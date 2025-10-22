@@ -1,0 +1,10 @@
+# Test workflow for pr-title-check-reusable.yml
+name: PR Title Test
+
+on:
+  pull_request:
+    types: [opened, synchronize, edited]
+
+jobs:
+  pr-title-check:
+    uses: maxrantil/.github/.github/workflows/pr-title-check-reusable.yml@master
