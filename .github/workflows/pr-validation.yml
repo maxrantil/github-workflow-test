@@ -1,9 +1,9 @@
-# Test workflow for session-handoff-check-reusable.yml and pr-body-ai-attribution-check-reusable.yml
+# Test workflow for session-handoff-check-reusable.yml, pr-body-ai-attribution-check-reusable.yml, and pr-title-check-reusable.yml
 name: PR Validation
 
 on:
   pull_request:
-    types: [opened, synchronize, ready_for_review]
+    types: [opened, synchronize, ready_for_review, edited]
 
 jobs:
   session-handoff:
@@ -18,3 +18,6 @@ jobs:
     with:
       block-ai-tools: true
       block-agent-mentions: true
+
+  pr-title-check:
+    uses: maxrantil/.github/.github/workflows/pr-title-check-reusable.yml@master
