@@ -1,1 +1,2 @@
 Initial feature
+Fixed typo
