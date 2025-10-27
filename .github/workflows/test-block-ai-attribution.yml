@@ -1,0 +1,16 @@
+name: Test Block AI Attribution
+
+on:
+  pull_request:
+    branches: [master]
+  push:
+    branches: [test-block-ai-attribution-*]
+
+jobs:
+  block-ai-attribution:
+    name: Block AI Attribution Check
+    uses: maxrantil/.github/.github/workflows/block-ai-attribution-reusable.yml@master
+    with:
+      base-branch: master
+      block-ai-tools: true
+      block-agent-mentions: true
