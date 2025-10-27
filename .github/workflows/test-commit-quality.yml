@@ -1,0 +1,16 @@
+# Test workflow for commit-quality-check-reusable.yml
+name: Test Commit Quality Check
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  test-commit-quality:
+    name: Test Commit Quality Analysis
+    uses: maxrantil/.github/.github/workflows/commit-quality-check-reusable.yml@master
+    with:
+      base-branch: master
+      fail-on-fixups: false
+      suggest-cleanup: true
+      cleanup-score-threshold: MEDIUM
