@@ -8,7 +8,7 @@ on:
 jobs:
   test-commit-quality:
     name: Test Commit Quality Analysis
-    uses: maxrantil/.github/.github/workflows/commit-quality-check-reusable.yml@master
+    uses: maxrantil/.github/.github/workflows/commit-quality-check-reusable.yml@8b82c64527317e63bf147fa763078da1054920b8
     with:
       base-branch: master
       fail-on-fixups: false
