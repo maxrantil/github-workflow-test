@@ -5,13 +5,16 @@ on:
   pull_request:
     types: [opened, synchronize, reopened]
 
+permissions:
+  pull-requests: write
+  contents: read
+
 jobs:
   test-commit-quality:
     name: Test Commit Quality Analysis
-    uses: maxrantil/.github/.github/workflows/commit-quality-check-reusable.yml@8b82c64527317e63bf147fa763078da1054920b8
+    uses: maxrantil/.github/.github/workflows/commit-quality-check-reusable.yml@master
     with:
       base-branch: master
       fail-on-fixups: false
       suggest-cleanup: true
       cleanup-score-threshold: MEDIUM
-    secrets: inherit
