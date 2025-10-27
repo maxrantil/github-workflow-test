@@ -14,3 +14,4 @@ jobs:
       fail-on-fixups: false
       suggest-cleanup: true
       cleanup-score-threshold: MEDIUM
+    secrets: inherit
