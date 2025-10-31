@@ -8,7 +8,7 @@ on:
 jobs:
   test-pre-commit:
     name: Test Pre-commit Execution
-    uses: maxrantil/.github/.github/workflows/pre-commit-check-reusable.yml@master
+    uses: maxrantil/.github/.github/workflows/pre-commit-check-reusable.yml@feat/issue-3-explicit-permissions
     with:
       python-version: '3.x'
       base-branch: master

@@ -11,7 +11,7 @@ on:
 jobs:
   test:
     name: Run Python Tests
-    uses: maxrantil/.github/.github/workflows/python-test-reusable.yml@feat/issue-13-python-test-validation
+    uses: maxrantil/.github/.github/workflows/python-test-reusable.yml@feat/issue-3-explicit-permissions
     with:
       python-version: '3.11'
       install-command: 'uv sync'
