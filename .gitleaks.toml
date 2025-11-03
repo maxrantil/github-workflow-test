@@ -1,0 +1,11 @@
+title = "Gitleaks Config for Test Repository"
+
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Allow common false positives in test repository"
+paths = [
+  '''README\.md$''',  # Allow example secrets in documentation
+  '''\.github/workflows/.*''',  # Allow workflow files
+]
