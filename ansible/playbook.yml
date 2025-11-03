@@ -13,3 +13,4 @@
         path: /tmp/ansible-test
         state: directory
         mode: '0755'
+Test trigger
