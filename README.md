@@ -42,3 +42,4 @@ Testing 4 issue validation workflows:
 - Test 3: Workflow PASSES, PRD reminder posted, auto-labeled
 - Test 4: Workflow PASSES, auto-labeled as 'bug'
 - Test 5: Auto-labeled as 'security', 'bug', 'priority: high'
+# Test 2: Verify cache hit
