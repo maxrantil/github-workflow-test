@@ -10,8 +10,8 @@ on:
 
 jobs:
   test:
-    name: Run Python Tests
-    uses: maxrantil/.github/.github/workflows/python-test-reusable.yml@feat/issue-13-python-test-validation
+    name: Run Python Tests (Testing Caching)
+    uses: maxrantil/.github/.github/workflows/python-test-reusable.yml@feat/issue-4-workflow-caching
     with:
       python-version: '3.11'
       install-command: 'uv sync'

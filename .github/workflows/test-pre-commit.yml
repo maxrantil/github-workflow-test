@@ -7,8 +7,8 @@ on:
 
 jobs:
   test-pre-commit:
-    name: Test Pre-commit Execution
-    uses: maxrantil/.github/.github/workflows/pre-commit-check-reusable.yml@master
+    name: Test Pre-commit Execution (Testing Caching)
+    uses: maxrantil/.github/.github/workflows/pre-commit-check-reusable.yml@feat/issue-4-workflow-caching
     with:
       python-version: '3.x'
       base-branch: master
