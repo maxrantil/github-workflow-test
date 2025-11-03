@@ -43,3 +43,4 @@ Testing 4 issue validation workflows:
 - Test 4: Workflow PASSES, auto-labeled as 'bug'
 - Test 5: Auto-labeled as 'security', 'bug', 'priority: high'
 # Test 2: Verify cache hit
+# Test 6: Verify pre-commit cache hit
