@@ -18,3 +18,4 @@ resource "random_string" "test" {
 output "random_value" {
   value = random_string.test.result
 }
+# Test comment
