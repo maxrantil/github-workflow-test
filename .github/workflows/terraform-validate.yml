@@ -1,0 +1,21 @@
+name: Terraform Validation Test
+
+on:
+  push:
+    branches:
+      - test/terraform-validate-**
+    paths:
+      - 'terraform/**'
+      - '.github/workflows/terraform-validate.yml'
+  pull_request:
+    paths:
+      - 'terraform/**'
+
+jobs:
+  terraform-validate:
+    name: Validate Terraform
+    uses: maxrantil/.github/.github/workflows/terraform-validate-reusable.yml@feat/issue-5-terraform-validate
+    with:
+      terraform-version: 'latest'
+      working-directory: './terraform'
+      run-plan: false
