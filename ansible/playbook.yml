@@ -1,0 +1,15 @@
+---
+- name: Test playbook for ansible-lint validation
+  hosts: localhost
+  gather_facts: false
+
+  tasks:
+    - name: Print message
+      ansible.builtin.debug:
+        msg: "Hello from Ansible playbook!"
+
+    - name: Create test directory
+      ansible.builtin.file:
+        path: /tmp/ansible-test
+        state: directory
+        mode: '0755'

@@ -1,0 +1,17 @@
+name: Test Ansible Lint Workflow
+
+on:
+  push:
+    branches:
+      - 'test/ansible-lint-**'
+  pull_request:
+    branches: [master]
+
+jobs:
+  ansible-lint:
+    name: Test Ansible Lint Reusable
+    uses: maxrantil/.github/.github/workflows/ansible-lint-reusable.yml@feat/issue-6-ansible-lint
+    with:
+      working-directory: './ansible'
+      ansible-lint-version: 'latest'
+      playbook-path: 'playbook.yml'
